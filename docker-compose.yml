@@ -40,8 +40,9 @@ services:
 
     environment:
       SELF_HOSTED: "true"
-      RAILS_FORCE_SSL: "false"
-      RAILS_ASSUME_SSL: "false"
+      RAILS_FORCE_SSL: "true"
+      RAILS_ASSUME_SSL: "true"
+      RAILS_HOST: "showcase.startyourmvp.com"
       GOOD_JOB_EXECUTION_MODE: async
       SECRET_KEY_BASE: ${SECRET_KEY_BASE:?}
       DB_HOST: postgres
