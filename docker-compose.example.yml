@@ -27,7 +27,6 @@
 #
 
 services:
-
   app:
     image: ghcr.io/maybe-finance/maybe:latest
 
@@ -35,7 +34,7 @@ services:
       - app-storage:/rails/storage
 
     ports:
-      - 3000:3000
+      - 3001:3000
 
     restart: unless-stopped
 
@@ -64,7 +63,7 @@ services:
       POSTGRES_DB: ${POSTGRES_DB:-maybe_production}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?}
     healthcheck:
-      test: [ "CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB" ]
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
       interval: 5s
       timeout: 5s
       retries: 5
