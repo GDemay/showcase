@@ -6,7 +6,7 @@
                            {
                              multiple: true,
                              checked: @q[:types]&.include?("income"),
-                             class: "maybe-checkbox maybe-checkbox--light"
+                             class: "mvp-checkbox mvp-checkbox--light"
                            },
                            "income",
                            nil %>
@@ -16,8 +16,8 @@
     <%= form.check_box :types,
                            {
                              multiple: true,
-                             checked: @q[:types]&.include?("expense"),
-                             class: "maybe-checkbox maybe-checkbox--light"
+                             checked: @q[:types]&&.include?("expense"),
+                             class: "mvp-checkbox mvp-checkbox--light"
                            },
                            "expense",
                            nil %>
@@ -27,8 +27,8 @@
     <%= form.check_box :types,
                            {
                              multiple: true,
-                             checked: @q[:types]&.include?("transfer"),
-                             class: "maybe-checkbox maybe-checkbox--light"
+                             checked: @q[:types]&&.include?("transfer"),
+                             class: "mvp-checkbox mvp-checkbox--light"
                            },
                            "transfer",
                            nil %>

@@ -5,7 +5,7 @@
   <div class="pr-10 flex items-center gap-4 col-span-6">
     <% if selectable %>
       <%= check_box_tag dom_id(entry, "selection"),
-                        class: "maybe-checkbox maybe-checkbox--light",
+                        class: "mvp-checkbox mvp-checkbox--light",
                         data: { id: entry.id, "bulk-select-target": "row", action: "bulk-select#toggleRowSelection" } %>
     <% end %>
 
